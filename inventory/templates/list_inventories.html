@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+<body>
+<button type="button" style="float: right;" onclick="location.href='http://google.com';">Add new</button>
+<table style="width:100%" border=1 frame=hsides rules=rows>
+    <tr>
+        <th height="40px" align="left">Product Name</th>
+        <th height="40px" align="left">Price</th>
+        <th height="40px" align="left">Product Quantity Left</th>
+    </tr>
+    {% for inventory in inventories %}
+    <tr>
+        <td height="40px">{{inventory.name}}</td>
+        <td height="40px">{{inventory.price}}</td>
+        <td height="40px">{{inventory.quantity}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+
+</html>
